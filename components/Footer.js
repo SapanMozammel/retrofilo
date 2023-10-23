@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 const Footer = () => {
   return (
@@ -7,17 +7,29 @@ const Footer = () => {
       <div className="container">
         <nav className="footer_content">
           <Link href="https://www.linkedin.com/in/sapanmozammel/">
-            <a className="footer_content_link">Linkedin</a>
+            <a
+              className="footer_content_link"
+              target="_blank">
+              Linkedin
+            </a>
           </Link>
           <Link href="https://github.com/SapanMozammel">
-            <a className="footer_content_link">GitHub</a>
+            <a
+              className="footer_content_link"
+              target="_blank">
+              GitHub
+            </a>
           </Link>
           <Link href="https://profiles.wordpress.org/sapanmozammel/">
-            <a className="footer_content_link">WordPress</a>
+            <a
+              className="footer_content_link"
+              target="_blank">
+              WordPress
+            </a>
           </Link>
           <div className="footer_sponsor">
             Powered by
-              <span className="sponsor_name">Sapan Mozammel</span>
+            <span className="sponsor_name">Sapan Mozammel</span>
           </div>
         </nav>
       </div>

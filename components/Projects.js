@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
-import Context from './context/context';
+import Link from 'next/link';
+import React, { useContext, useEffect, useState } from 'react';
 import { InView } from 'react-intersection-observer';
+import Context from './context/context';
 
 const Projects = () => {
   const { ref, setSectionVisible } = useContext(Context);
@@ -124,12 +125,17 @@ const Projects = () => {
                 </div>
                 <div className="right">
                   <h3 className="title">{project?.title}</h3>
-                  <p className="text">{project?.description.substring(0,70)}...</p>
-                  <a
-                    href={project?.link}
-                    className="button">
-                    Visit Site
-                  </a>
+                  <p className="text">
+                    {project?.description.substring(0, 70)}...
+                  </p>
+
+                  <Link href={project?.link}>
+                    <a
+                      className="button"
+                      target="_blank">
+                      Visit Site
+                    </a>
+                  </Link>
                 </div>
               </div>
             ))}
